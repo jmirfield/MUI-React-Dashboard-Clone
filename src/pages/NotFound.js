@@ -29,10 +29,14 @@ const NotFound = () => {
             <Container sx={{
                 minHeight: '100vh',
                 pt: 15,
-                pb: 10
+                pb: 10,
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center'
             }}>
                 <Box sx={{
                     width: 480,
+                    maxWidth: 1,
                     display: 'flex',
                     flexDirection: 'column',
                     alignItems: 'center'

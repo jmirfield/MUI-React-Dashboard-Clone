@@ -22,15 +22,6 @@ const theme = createTheme({
                     boxShadow: 'none'
                 }
             }
-        },
-        MuiContainer: {
-            styleOverrides: {
-                root: {
-                    display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'center'
-                }
-            }
         }
     },
     typography: {
