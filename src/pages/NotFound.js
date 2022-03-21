@@ -1,12 +1,25 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
-import AppBar from '@mui/material/AppBar'
+import { keyframes } from '@mui/styled-engine'
 import Logo from '../components/Logo'
-import Container from '@mui/material/Container'
-import Typography from '@mui/material/Typography'
-import Zoom from '@mui/material/Zoom'
+import { AppBar, Container, Typography, Button } from '@mui/material'
+import Box from '@mui/system/Box'
 import notFound from '../images/404.svg'
-import { Box } from '@mui/system'
+
+const bounce = keyframes`
+    from {
+        transform: scale(0)
+    }
+    5%, 40% {
+        transform: scale(110%)
+    }
+    20%, 70% {
+        transform: scale(90%)
+    }
+    to {
+        transform: scale(100%)
+    }
+`
 
 const NotFound = () => {
     return (
@@ -30,7 +43,6 @@ const NotFound = () => {
                 minHeight: '100vh',
                 pt: 15,
                 pb: 10,
-                display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center'
             }}>
@@ -41,36 +53,43 @@ const NotFound = () => {
                     flexDirection: 'column',
                     alignItems: 'center'
                 }}>
-                    <Zoom in={true}>
-                        <Typography
-                            paragraph
-                            variant='h4'
-                            align='center'
-                        >
-                            Sorry, page not found!
-                        </Typography>
-                    </Zoom>
+                    <Typography
+                        paragraph
+                        variant='h4'
+                        align='center'
+                        sx={{
+                            animation: `${bounce} .75s ease-out`,
+                            fontWeight: 'bold'
+                        }}
+                    >
+                        Sorry, page not found!
+                    </Typography>
                     <Typography
                         align='center'
                         sx={{ color: 'text.secondary' }}
                     >
                         Sorry, we couldn’t find the page you’re looking for. Perhaps you’ve mistyped the URL? Be sure to check your spelling.
                     </Typography>
-                    <Zoom in={true}>
-                        <Box
-                            component='img'
-                            src={notFound}
-                            alt='404 image'
-                            loading='lazy'
-                            sx={{
-                                width: 350,
-                                ml: 'auto',
-                                mr: 'auto',
-                                mt: 10,
-                                mb: 10
-                            }}
-                        />
-                    </Zoom>
+                    <Box
+                        component='img'
+                        src={notFound}
+                        alt='404 image'
+                        loading='lazy'
+                        sx={{
+                            width: 350,
+                            ml: 'auto',
+                            mr: 'auto',
+                            mt: 10,
+                            mb: 10,
+                            animation: `${bounce} .75s ease-out`
+                        }}
+                    />
+                    <Button
+                        variant='contained'
+                        href='/'
+                        size='large'
+                        sx={{ p: 1.5 }}
+                    >Go To Home</Button>
                 </Box>
             </Container>
         </>

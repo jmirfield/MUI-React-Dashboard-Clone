@@ -1,8 +1,9 @@
 import React from 'react'
+import { Container } from '@mui/material'
 
 const Main = () => {
   return (
-    <div>Main</div>
+    <Container>Main</Container>
   )
 }
 

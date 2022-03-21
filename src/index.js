@@ -6,6 +6,9 @@ import './global.css'
 import reportWebVitals from './reportWebVitals';
 
 const theme = createTheme({
+    palette: {
+        primary: { main: 'rgb(0, 171, 85)' }
+    },
     breakpoints: {
         values: {
             mobile: 0,
@@ -19,16 +22,20 @@ const theme = createTheme({
             styleOverrides: {
                 root: {
                     backgroundColor: 'transparent',
-                    boxShadow: 'none'
+                    boxShadow: 'none',
+                    minHeight: 60
+                }
+            }
+        },
+        MuiContainer: {
+            styleOverrides: {
+                root: {
+                    minHeight: '100vh',
+                    display: 'flex',
+                    padding: 0
                 }
             }
         }
-    },
-    typography: {
-        fontFamily: [
-            'Public Sans', 
-            'sans-serif'
-        ].join(',')
     }
 })
 

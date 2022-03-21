@@ -1,11 +1,14 @@
 import React from 'react'
 import { Outlet } from 'react-router-dom'
+import { Container } from '@mui/material'
+import DashboardNavbar from './DashboardNavbar'
 
-const DashboardLayout = ({ children }) => {
+const DashboardLayout = () => {
     return (
-        <div>
+        <Container>
+            <DashboardNavbar />
             <Outlet />
-        </div>
+        </Container>
     )
 }
 
