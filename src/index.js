@@ -5,9 +5,9 @@ import App from './App';
 import './global.css'
 import reportWebVitals from './reportWebVitals';
 
-const theme = createTheme({
+let theme = createTheme({
     palette: {
-        primary: { main: 'rgb(0, 171, 85)' }
+        primary: { main: 'rgb(0, 171, 85)' },
     },
     breakpoints: {
         values: {
@@ -23,7 +23,8 @@ const theme = createTheme({
                 root: {
                     backgroundColor: 'transparent',
                     boxShadow: 'none',
-                    minHeight: 60
+                    minHeight: 60,
+                    justifyContent: 'center',
                 }
             }
         },
@@ -35,9 +36,19 @@ const theme = createTheme({
                     padding: 0
                 }
             }
+        },
+        MuiToolbar: {
+            styleOverrides: {
+                root: {
+                    width: '100%',
+                    justifyContent: 'space-between',
+                    height: '92px'
+                }
+            }
         }
     }
 })
+
 
 ReactDOM.render(
     <React.StrictMode>
