@@ -1,53 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { ThemeProvider, createTheme } from '@mui/material/styles';
+import { ThemeProvider } from '@mui/material/styles';
+import { theme } from './theme/theme';
 import App from './App';
 import './global.css'
 import reportWebVitals from './reportWebVitals';
-
-let theme = createTheme({
-    palette: {
-        primary: { main: 'rgb(0, 171, 85)' },
-    },
-    breakpoints: {
-        values: {
-            mobile: 0,
-            tablet: 640,
-            laptop: 1024,
-            desktop: 1200,
-        }
-    },
-    components: {
-        MuiAppBar: {
-            styleOverrides: {
-                root: {
-                    backgroundColor: 'transparent',
-                    boxShadow: 'none',
-                    minHeight: 60,
-                    justifyContent: 'center',
-                }
-            }
-        },
-        MuiContainer: {
-            styleOverrides: {
-                root: {
-                    minHeight: '100vh',
-                    display: 'flex',
-                    padding: 0
-                }
-            }
-        },
-        MuiToolbar: {
-            styleOverrides: {
-                root: {
-                    width: '100%',
-                    justifyContent: 'space-between',
-                    height: '92px'
-                }
-            }
-        }
-    }
-})
 
 
 ReactDOM.render(
