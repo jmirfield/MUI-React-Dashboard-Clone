@@ -37,7 +37,17 @@ export const theme = createTheme({
                 root: {
                     width: '100%',
                     justifyContent: 'space-between',
-                    height: `${APP_BAR}px`
+                    height: `${APP_BAR}px`,
+                    paddingLeft: 40,
+                    paddingRight: 40
+                }
+            }
+        },
+        MuiIconButton: {
+            styleOverrides: {
+                root: {
+                    width: '44px',
+                    height: '44px'
                 }
             }
         }

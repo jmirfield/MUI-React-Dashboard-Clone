@@ -1,0 +1,41 @@
+import React from 'react'
+import withAnchorAndState from '../helpers/withAnchorAndState'
+import NavPopover from '../components/NavPopover'
+import { IconButton, ListItemIcon, ListItemText, MenuItem } from '@mui/material'
+import { FLAGS } from '../utils/constants'
+
+const LanguagePopover = React.forwardRef(({ open, handleClick, handleClose }, ref) => {
+    return (
+        <>
+            <IconButton
+                onClick={handleClick}
+                ref={ref}
+                sx={{
+                    ...(open && {
+                        bgcolor: (theme) => theme.palette.grey[300]
+                    })
+                }}
+            >
+                <img src={FLAGS[0].path} alt={FLAGS[0].label} />
+            </IconButton>
+            <NavPopover open={open} anchorEl={ref.current} onClose={handleClose}>
+                {FLAGS.map((flag, idx) => (
+                    <MenuItem
+                        key={idx}
+                        onClick={handleClose}
+                        selected={flag.label === 'English'}
+                    >
+                        <ListItemIcon>
+                            <img src={flag.path} alt={flag.label} />
+                        </ListItemIcon>
+                        <ListItemText>
+                            {flag.label}
+                        </ListItemText>
+                    </MenuItem>
+                ))}
+            </NavPopover>
+        </>
+    )
+})
+
+export default withAnchorAndState(LanguagePopover)

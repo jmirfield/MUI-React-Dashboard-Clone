@@ -4,6 +4,8 @@ import { AppBar, Toolbar, IconButton, Stack } from '@mui/material'
 import Icon from '../components/Icon'
 import { CgSearch } from 'react-icons/cg'
 import { APP_BAR_SMALL, DRAWER_WIDTH } from '../utils/constants';
+import LanguagePopover from './LanguagePopover'
+import NotificationPopover from './NotificationPopover'
 
 const DashboardAppBar = styled(AppBar)(({ theme }) => ({
     [theme.breakpoints.up('desktop')]: {
@@ -29,8 +31,8 @@ const DashboardNavbar = () => {
                     <IconButton children={<Icon component={CgSearch} />} variant='secondary' />
                     <Stack direction="row" alignItems="center" spacing={{ mobile: 1, laptop: 2, }}>
                         {/* PLACEHOLDERS */}
-                        <IconButton children={<Icon component={CgSearch} />} variant='secondary' />
-                        <IconButton children={<Icon component={CgSearch} />} variant='secondary' />
+                        <LanguagePopover />
+                        <NotificationPopover />
                         <IconButton children={<Icon component={CgSearch} />} variant='secondary' />
                     </Stack>
                 </DashboardToolbar>
