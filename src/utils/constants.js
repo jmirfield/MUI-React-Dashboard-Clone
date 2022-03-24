@@ -1,3 +1,8 @@
+import { AiFillPieChart } from 'react-icons/ai'
+import { IoPeople, IoBagHandle, IoNewspaper, IoPersonAddSharp } from 'react-icons/io5'
+import { GiPlagueDoctorProfile } from 'react-icons/gi'
+import { MdOutlineError } from 'react-icons/md'
+
 export const APP_BAR_SMALL = 64;
 export const APP_BAR = 92;
 export const DRAWER_WIDTH = 280;
@@ -34,3 +39,41 @@ export const MENU_OPTIONS = [
         label: 'Settings',
     }
 ];
+
+export const SIDEBAR_OPTIONS = [
+    {
+        label: 'Dashboard',
+        path: '/dashboard/app',
+        icon: AiFillPieChart
+    },
+    {
+        label: 'User',
+        path: '',
+        icon: IoPeople
+    },
+    {
+        label: 'Product',
+        path: '',
+        icon: IoBagHandle
+    },
+    {
+        label: 'Blog',
+        path: '',
+        icon: IoNewspaper
+    },
+    {
+        label: 'Login',
+        path: '',
+        icon: GiPlagueDoctorProfile
+    }, 
+    {
+        label: 'Register',
+        path: '',
+        icon: IoPersonAddSharp
+    },
+    {
+        label: 'Not Found',
+        path: 'notfound1234',
+        icon: MdOutlineError
+    }
+]

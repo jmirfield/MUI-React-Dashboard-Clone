@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
 import { keyframes } from '@mui/styled-engine'
 import Logo from '../components/Logo'
@@ -86,7 +87,8 @@ const NotFound = () => {
                     />
                     <Button
                         variant='contained'
-                        href='/'
+                        component={Link}
+                        to='/dashboard/app'
                         size='large'
                         sx={{ p: 1.5 }}
                     >Go To Home</Button>
