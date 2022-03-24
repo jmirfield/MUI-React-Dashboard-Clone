@@ -16,7 +16,8 @@ const SearchBar = ({ open, handleClose, Toolbar }) => {
                     mobile: APP_BAR_SMALL
                 },
                 marginLeft: 'auto',
-                opacity: .85
+                opacity: .85,
+                borderBottomLeftRadius: 10
             }
         }} >
             <Toolbar sx={{ justifyContent: 'left' }}>
