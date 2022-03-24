@@ -16,3 +16,21 @@ export const FLAGS = [
         path: '/static/ic_flag_fr.svg'
     }
 ]
+
+export const DEMO_ACCOUNT = {
+    name: 'Justin Mirfield',
+    email: 'justin@test.com',
+    photoURL: '/static/avatar.jpg'
+}
+
+export const MENU_OPTIONS = [
+    {
+        label: 'Home',
+    },
+    {
+        label: 'Profile',
+    },
+    {
+        label: 'Settings',
+    }
+];

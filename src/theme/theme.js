@@ -38,7 +38,7 @@ export const theme = createTheme({
                     width: '100%',
                     justifyContent: 'space-between',
                     height: `${APP_BAR}px`,
-                    paddingLeft: 40,
+                    paddingLeft: 20,
                     paddingRight: 40
                 }
             }
@@ -48,6 +48,13 @@ export const theme = createTheme({
                 root: {
                     width: '44px',
                     height: '44px'
+                }
+            }
+        },
+        MuiButton: {
+            styleOverrides: {
+                root: {
+                    borderRadius: 8
                 }
             }
         }

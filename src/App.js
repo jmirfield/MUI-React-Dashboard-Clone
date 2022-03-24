@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
-import DashboardLayout from './layout/DashboardLayout'
+import DashboardLayout from './layout/index'
 import Main from './pages/Main';
 import NotFound from './pages/NotFound';
 
