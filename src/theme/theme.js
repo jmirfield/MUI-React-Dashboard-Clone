@@ -1,7 +1,7 @@
 import { createTheme } from "@mui/material/styles"
-import { APP_BAR } from "../utils/constants"
+import ComponentsOverrides from "./overrides"
 
-export const theme = createTheme({
+const theme = createTheme({
     palette: {
         primary: { main: 'rgb(0, 171, 85)' },
     },
@@ -13,50 +13,8 @@ export const theme = createTheme({
             desktop: 1200,
         }
     },
-    components: {
-        MuiAppBar: {
-            styleOverrides: {
-                root: {
-                    backgroundColor: 'transparent',
-                    boxShadow: 'none',
-                    minHeight: 60,
-                    justifyContent: 'center',
-                }
-            }
-        },
-        MuiContainer: {
-            styleOverrides: {
-                root: {
-                    display: 'flex',
-                    padding: 0
-                }
-            }
-        },
-        MuiToolbar: {
-            styleOverrides: {
-                root: {
-                    width: '100%',
-                    justifyContent: 'space-between',
-                    height: `${APP_BAR}px`,
-                    paddingLeft: 20,
-                    paddingRight: 40
-                }
-            }
-        },
-        MuiIconButton: {
-            styleOverrides: {
-                root: {
-                    width: '44px',
-                    height: '44px'
-                }
-            }
-        },
-        MuiButton: {
-            styleOverrides: {
-                root: {
-                    borderRadius: 8
-                }
-            }
-        }
-    }
 })
+
+theme.components = ComponentsOverrides(theme)
+
+export default theme
