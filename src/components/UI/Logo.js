@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Box from '@mui/system/Box'
-import logo from '../images/logo.svg'
+import logo from '../../images/logo.svg'
 
 const Logo = () => {
     return (

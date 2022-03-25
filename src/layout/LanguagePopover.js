@@ -1,6 +1,6 @@
 import React from 'react'
 import withAnchorAndState from '../helpers/withAnchorAndState'
-import NavPopover from '../components/NavPopover'
+import NavPopover from '../components/UI/NavPopover'
 import { IconButton, ListItemIcon, ListItemText, MenuItem, MenuList } from '@mui/material'
 import { FLAGS } from '../utils/constants'
 

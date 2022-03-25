@@ -1,12 +1,10 @@
 import React from 'react'
 import withAnchorAndState from '../helpers/withAnchorAndState';
 import { IconButton, Avatar, Typography, Divider, MenuList, MenuItem, Button } from '@mui/material';
-import NavPopover from '../components/NavPopover';
+import NavPopover from '../components/UI/NavPopover';
 import { DEMO_ACCOUNT, MENU_OPTIONS } from '../utils/constants';
 import { Box } from '@mui/system';
-import Icon from '../components/Icon';
-import { CgHome, CgProfile, } from 'react-icons/cg';
-import { AiOutlineSetting } from "react-icons/ai";
+import Icon from '../components/UI/Icon';
 
 const ProfilePopover = React.forwardRef(({ open, handleClick, handleClose }, ref) => {
     return (
@@ -21,7 +19,7 @@ const ProfilePopover = React.forwardRef(({ open, handleClick, handleClose }, ref
                 open={open}
                 anchorEl={ref.current}
                 onClose={handleClose}
-                sx={{width: 225}}
+                sx={{ width: 225 }}
             >
                 <Box sx={{ p: 2 }}>
                     <Typography>
@@ -32,13 +30,13 @@ const ProfilePopover = React.forwardRef(({ open, handleClick, handleClose }, ref
                     </Typography>
                 </Box>
                 <Divider />
-                <MenuList sx={{mr: 1}}>
+                <MenuList sx={{ mr: 1 }}>
                     {MENU_OPTIONS.map((option, idx) => (
                         <MenuItem key={idx}>
-                            {option.label === 'Home' && <Icon component={CgHome} sx={{ mr: 1 }} />}
-                            {option.label === 'Profile' && <Icon component={CgProfile} sx={{ mr: 1 }} />}
-                            {option.label === 'Settings' &&<Icon component={AiOutlineSetting} sx={{ mr: 1 }} />}
-                            {option.label}
+                            <Icon component={option.icon} sx={{ mr: 2 }} />
+                            <Typography variant='subtitle2'>
+                                {option.label}
+                            </Typography>
                         </MenuItem>
                     ))}
                 </MenuList>

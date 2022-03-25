@@ -4,8 +4,8 @@ import { alpha, Badge, Typography, Divider, List, IconButton, ListItemButton, Li
 import { Box } from '@mui/system';
 import { IoIosNotifications, IoIosTime } from 'react-icons/io'
 import { BsCheckAll } from 'react-icons/bs'
-import NavPopover from '../components/NavPopover';
-import Icon from '../components/Icon';
+import NavPopover from '../components/UI/NavPopover';
+import Icon from '../components/UI/Icon';
 import { date } from '../utils/date';
 
 const dateHelperDemo = (hours) => {

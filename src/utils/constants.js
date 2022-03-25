@@ -1,4 +1,5 @@
-import { AiFillPieChart } from 'react-icons/ai'
+import { AiFillPieChart, AiOutlineSetting } from 'react-icons/ai'
+import { CgHome, CgProfile, } from 'react-icons/cg';
 import { IoPeople, IoBagHandle, IoNewspaper, IoPersonAddSharp } from 'react-icons/io5'
 import { GiPlagueDoctorProfile } from 'react-icons/gi'
 import { MdOutlineError } from 'react-icons/md'
@@ -31,12 +32,15 @@ export const DEMO_ACCOUNT = {
 export const MENU_OPTIONS = [
     {
         label: 'Home',
+        icon: CgHome
     },
     {
         label: 'Profile',
+        icon: CgProfile
     },
     {
         label: 'Settings',
+        icon: AiOutlineSetting
     }
 ];
 
@@ -48,17 +52,17 @@ export const SIDEBAR_OPTIONS = [
     },
     {
         label: 'User',
-        path: '',
+        path: '/dashboard/user',
         icon: IoPeople
     },
     {
         label: 'Product',
-        path: '',
+        path: '/dashboard/product',
         icon: IoBagHandle
     },
     {
         label: 'Blog',
-        path: '',
+        path: '/dashboard/blog',
         icon: IoNewspaper
     },
     {

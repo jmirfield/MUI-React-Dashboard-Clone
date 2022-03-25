@@ -1,10 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Helmet } from 'react-helmet'
 import { keyframes } from '@mui/styled-engine'
-import Logo from '../components/Logo'
-import { AppBar, Container, Typography, Button } from '@mui/material'
-import Box from '@mui/system/Box'
+import { AppBar, Container, Typography, Button, Box } from '@mui/material'
+import useTitle from '../hooks/useTitle';
+import Logo from '../components/UI/Logo'
 import notFound from '../images/404.svg'
 
 const bounce = keyframes`
@@ -23,11 +22,9 @@ const bounce = keyframes`
 `
 
 const NotFound = () => {
+    useTitle('404 Page Not Found')
     return (
         <>
-            <Helmet>
-                <title>404 Page Not Found</title>
-            </Helmet>
             <AppBar sx={{
                 pl: {
                     desktop: 5,
@@ -59,7 +56,7 @@ const NotFound = () => {
                         variant='h4'
                         align='center'
                         sx={{
-                            animation: `${bounce} .75s ease-out`,
+                            animation: `${bounce} 2s ease-out`,
                             fontWeight: 'bold'
                         }}
                     >
@@ -82,7 +79,7 @@ const NotFound = () => {
                             mr: 'auto',
                             mt: 10,
                             mb: 10,
-                            animation: `${bounce} .75s ease-out`
+                            animation: `${bounce} 2s ease-out`
                         }}
                     />
                     <Button

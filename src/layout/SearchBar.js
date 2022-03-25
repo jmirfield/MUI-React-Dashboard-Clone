@@ -1,7 +1,7 @@
 import React from 'react'
 import { Drawer, IconButton, Input, Button } from '@mui/material'
 import { DRAWER_WIDTH, APP_BAR, APP_BAR_SMALL } from '../utils/constants'
-import Icon from '../components/Icon'
+import Icon from '../components/UI/Icon'
 import { CgSearch } from 'react-icons/cg'
 
 const SearchBar = ({ open, handleClose, Toolbar }) => {

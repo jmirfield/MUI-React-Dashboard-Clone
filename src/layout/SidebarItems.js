@@ -3,7 +3,7 @@ import { NavLink, useMatch, useResolvedPath } from 'react-router-dom';
 import { MenuItem, MenuList, Typography } from '@mui/material';
 import { alpha } from '@mui/material';
 import { SIDEBAR_OPTIONS } from '../utils/constants';
-import Icon from '../components/Icon'
+import Icon from '../components/UI/Icon'
 
 const SidebarItem = ({ to, icon, label }) => {
     const resolved = useResolvedPath(to);

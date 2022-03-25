@@ -13,6 +13,16 @@ const theme = createTheme({
             desktop: 1200,
         }
     },
+    typography: {
+        h1: {
+            fontSize: '2rem',
+            fontWeight: 700
+        },
+        h2: {
+            fontSize: '1.5rem',
+            fontWeight: 700
+          },
+    }
 })
 
 theme.components = ComponentsOverrides(theme)
