@@ -3,7 +3,7 @@ This is a clone of https://minimal-kit-react.vercel.app/ to practice MUI
 
 # Preview :
 
-<img src="https://github.com/jmirfield/Chirpy-Twitter-Clone/blob/main/Demo/demo.PNG" alt="Dashboard Demo" width="800">
+<img src="https://github.com/jmirfield/Chirpy-Twitter-Clone/blob/main/demo/demo.PNG" alt="Dashboard Demo" width="800">
 
 ## Setup
 Get the code by either cloning this repository using git
