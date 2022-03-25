@@ -14,6 +14,6 @@ npm install
 ```
 Then start the example app with:
 ```
-npm run dev
+npm start
 ```
 The app should now be up and running at http://localhost:3000 🚀
