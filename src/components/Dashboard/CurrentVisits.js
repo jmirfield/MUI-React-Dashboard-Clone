@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useMemo } from 'react'
 import { Paper, Typography, Box } from '@mui/material'
 import { ResponsiveContainer, PieChart, Pie, Tooltip, Legend, Cell } from 'recharts'
 
@@ -26,6 +26,9 @@ const CHART_DATA = [
 ]
 
 const CurrentVisits = () => {
+
+    const data = useMemo(() => CHART_DATA, [])
+
     return (
         <Paper sx={{ pb: 1 }}>
             <Box sx={{ px: 2, py: 3 }}>
@@ -33,9 +36,9 @@ const CurrentVisits = () => {
             </Box>
             <ResponsiveContainer width='95%' height={350}>
                 <PieChart>
-                    <Pie data={CHART_DATA} dataKey='data' nameKey='name' label>
+                    <Pie data={data} dataKey='data' nameKey='name' label>
                         {
-                            CHART_DATA.map((entry, index) => <Cell fill={entry.color} />)
+                            data.map((entry, index) => <Cell key={index} fill={entry.color} />)
                         }
                     </Pie>
                     <Tooltip />
@@ -46,4 +49,4 @@ const CurrentVisits = () => {
     )
 }
 
-export default CurrentVisits
+export default React.memo(CurrentVisits)

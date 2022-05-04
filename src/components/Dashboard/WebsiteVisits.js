@@ -78,7 +78,6 @@ const CHART_DATA = [
 ];
 
 const WebsiteVisits = () => {
-
     return (
         <Paper >
             <Box sx={{ px: 2, py: 3 }}>
@@ -88,8 +87,8 @@ const WebsiteVisits = () => {
             <ResponsiveContainer width='95%' height={400}>
                 <ComposedChart data={CHART_DATA}>
                     <CartesianGrid stroke="#e0dada" />
-                    <Area dataKey="teamC" type='natural' stroke="#d9c666" fill='#eaf5b5'/>
-                    <Bar dataKey="teamB" barSize={3} fill='#32bf34'/>
+                    <Area dataKey="teamC" type='natural' stroke="#d9c666" fill='#eaf5b5' />
+                    <Bar dataKey="teamB" barSize={3} fill='#32bf34' />
                     <Line dataKey="teamA" strokeWidth={3} type='natural' />
                     <XAxis dataKey="name" />
                     <YAxis />
@@ -100,4 +99,4 @@ const WebsiteVisits = () => {
     )
 }
 
-export default WebsiteVisits
+export default React.memo(WebsiteVisits);
