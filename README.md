@@ -1,5 +1,5 @@
 # MUI & React example
-DEMO 👉 https://muiclone.herokuapp.com//
+DEMO 👉 https://muiclone.herokuapp.com/
 
 This is a clone of https://minimal-kit-react.vercel.app/ to practice MUI
 
